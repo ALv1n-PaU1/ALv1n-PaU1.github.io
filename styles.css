@@ -5,30 +5,56 @@
     font-size: 24px;
     
   }*/
+    
+  /* Main content */
+  .main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+  }
+
   body {
     display: flex;
     flex-direction: column;
     text-align: center; 
     align-items: center;
     justify-content: center;
-    background-color: rgb(226, 242, 242);
+    
   }
-  <main class="wrapper">
-  <section class="section parallax bg1">
-    <h1>Relevant Image</h1>
-  </section>
-  <section class="section static">
-    <h1>Relevant Image</h1>
-  </section>
-  <section class="section parallax bg2">
-    <h1>Relevant Image</h1>
-  </section>
-</main>
+ 
+  .topnav {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
 
 .wrapper {
   /* The height needs to be set to a fixed value for the effect to work.
    * 100vh is the full height of the viewport. */
   height: 100vh;
+  width: 100vw;
   /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
   overflow-x: hidden;
   /* Enable scrolling on the page. */
@@ -45,10 +71,11 @@
 
   /* For text formatting. */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
-  text-shadow: 0 0 5px #000;
+  /*text-shadow: 0 0 5px #000;*/
 }
 
 .parallax::after {
@@ -72,20 +99,20 @@
 
 /* The styling for the static div. */
 .static {
-  background: red;
+  background:rgb(226, 242, 242);
+  height: 47vh;
+  color: black;
 }
 
 /* Sets the actual background images to adorable kitties. This part is crucial. */
 .bg1::after {
-  background-image: url('https://www.billtrack50.com/blog/wp-content/uploads/2015/03/wpid-Photography-Water-Drop-Wallpaper-95.jpg');
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/96/A_water_droplet_splash.jpg');
 }
 
 .bg2::after {
-  background-image: url('https://i.ytimg.com/vi/y-uYR6evUHA/maxresdefault.jpg');
+  background-image: url('https://www.goodfreephotos.com/albums/astrophotography/sunrise-over-the-earth.jpg');
 }
-/*.parallax{
-    background: url(img src="https://cdn.mos.cms.futurecdn.net/fEiiAFCszqW8THGArcpAG4.jpg") no-repeat center;
-    background-size: cover;
-    background-attachment: fixed:
-  }*/
-  /*Use the code above to code the parallax after/*
+.bg3::after {
+  background-image: url('https://pixnio.com/free-images/2017/03/07/2017-03-07-06-39-49.jpg');
+}
+
